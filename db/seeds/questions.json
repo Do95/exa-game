@@ -1,0 +1,2134 @@
+[
+ {
+  "kind": "irregular",
+  "prompt": "go",
+  "hint": "",
+  "options": [
+   "went",
+   "goed",
+   "gone",
+   "wented"
+  ],
+  "correct_index": 0,
+  "explanation": "go → went. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "buy",
+  "hint": "",
+  "options": [
+   "bought",
+   "buyed",
+   "brought",
+   "boughted"
+  ],
+  "correct_index": 0,
+  "explanation": "buy → bought. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "eat",
+  "hint": "",
+  "options": [
+   "ate",
+   "eated",
+   "eaten",
+   "ated"
+  ],
+  "correct_index": 0,
+  "explanation": "eat → ate. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "take",
+  "hint": "",
+  "options": [
+   "took",
+   "taked",
+   "taken",
+   "tooked"
+  ],
+  "correct_index": 0,
+  "explanation": "take → took. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "think",
+  "hint": "",
+  "options": [
+   "thought",
+   "thinked",
+   "taught",
+   "thank"
+  ],
+  "correct_index": 0,
+  "explanation": "think → thought. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "see",
+  "hint": "",
+  "options": [
+   "saw",
+   "seed",
+   "seen",
+   "sawed"
+  ],
+  "correct_index": 0,
+  "explanation": "see → saw. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "write",
+  "hint": "",
+  "options": [
+   "wrote",
+   "writed",
+   "written",
+   "wroted"
+  ],
+  "correct_index": 0,
+  "explanation": "write → wrote. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "come",
+  "hint": "",
+  "options": [
+   "came",
+   "comed",
+   "comen",
+   "camed"
+  ],
+  "correct_index": 0,
+  "explanation": "come → came. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "have",
+  "hint": "",
+  "options": [
+   "had",
+   "haved",
+   "has",
+   "hadded"
+  ],
+  "correct_index": 0,
+  "explanation": "have → had. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "get",
+  "hint": "",
+  "options": [
+   "got",
+   "getted",
+   "gotten",
+   "gat"
+  ],
+  "correct_index": 0,
+  "explanation": "get → got. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "make",
+  "hint": "",
+  "options": [
+   "made",
+   "maked",
+   "maded",
+   "mode"
+  ],
+  "correct_index": 0,
+  "explanation": "make → made. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "feel",
+  "hint": "",
+  "options": [
+   "felt",
+   "feeled",
+   "fell",
+   "felted"
+  ],
+  "correct_index": 0,
+  "explanation": "feel → felt. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "run",
+  "hint": "",
+  "options": [
+   "ran",
+   "runned",
+   "rund",
+   "raned"
+  ],
+  "correct_index": 0,
+  "explanation": "run → ran. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "leave",
+  "hint": "",
+  "options": [
+   "left",
+   "leaved",
+   "leaft",
+   "lefted"
+  ],
+  "correct_index": 0,
+  "explanation": "leave → left. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "drink",
+  "hint": "",
+  "options": [
+   "drank",
+   "drinked",
+   "drunk",
+   "drinken"
+  ],
+  "correct_index": 0,
+  "explanation": "drink → drank. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "swim",
+  "hint": "",
+  "options": [
+   "swam",
+   "swimmed",
+   "swum",
+   "swimed"
+  ],
+  "correct_index": 0,
+  "explanation": "swim → swam. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "sing",
+  "hint": "",
+  "options": [
+   "sang",
+   "singed",
+   "sung",
+   "sanged"
+  ],
+  "correct_index": 0,
+  "explanation": "sing → sang. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "begin",
+  "hint": "",
+  "options": [
+   "began",
+   "beginned",
+   "begun",
+   "begon"
+  ],
+  "correct_index": 0,
+  "explanation": "begin → began. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "break",
+  "hint": "",
+  "options": [
+   "broke",
+   "breaked",
+   "broken",
+   "brake"
+  ],
+  "correct_index": 0,
+  "explanation": "break → broke. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "choose",
+  "hint": "",
+  "options": [
+   "chose",
+   "choosed",
+   "chosen",
+   "choosen"
+  ],
+  "correct_index": 0,
+  "explanation": "choose → chose. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "drive",
+  "hint": "",
+  "options": [
+   "drove",
+   "drived",
+   "driven",
+   "drave"
+  ],
+  "correct_index": 0,
+  "explanation": "drive → drove. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "fly",
+  "hint": "",
+  "options": [
+   "flew",
+   "flied",
+   "flown",
+   "flyed"
+  ],
+  "correct_index": 0,
+  "explanation": "fly → flew. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "forget",
+  "hint": "",
+  "options": [
+   "forgot",
+   "forgetted",
+   "forgotten",
+   "forgat"
+  ],
+  "correct_index": 0,
+  "explanation": "forget → forgot. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "give",
+  "hint": "",
+  "options": [
+   "gave",
+   "gived",
+   "given",
+   "gaved"
+  ],
+  "correct_index": 0,
+  "explanation": "give → gave. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "know",
+  "hint": "",
+  "options": [
+   "knew",
+   "knowed",
+   "known",
+   "knewed"
+  ],
+  "correct_index": 0,
+  "explanation": "know → knew. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "lose",
+  "hint": "",
+  "options": [
+   "lost",
+   "losed",
+   "loosed",
+   "lossed"
+  ],
+  "correct_index": 0,
+  "explanation": "lose → lost. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "meet",
+  "hint": "",
+  "options": [
+   "met",
+   "meeted",
+   "meat",
+   "mett"
+  ],
+  "correct_index": 0,
+  "explanation": "meet → met. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "pay",
+  "hint": "",
+  "options": [
+   "paid",
+   "payed",
+   "paied",
+   "payd"
+  ],
+  "correct_index": 0,
+  "explanation": "pay → paid. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "say",
+  "hint": "",
+  "options": [
+   "said",
+   "sayed",
+   "sayd",
+   "sed"
+  ],
+  "correct_index": 0,
+  "explanation": "say → said. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "sell",
+  "hint": "",
+  "options": [
+   "sold",
+   "selled",
+   "seld",
+   "sole"
+  ],
+  "correct_index": 0,
+  "explanation": "sell → sold. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "send",
+  "hint": "",
+  "options": [
+   "sent",
+   "sended",
+   "sant",
+   "sented"
+  ],
+  "correct_index": 0,
+  "explanation": "send → sent. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "sleep",
+  "hint": "",
+  "options": [
+   "slept",
+   "sleeped",
+   "slepped",
+   "sleept"
+  ],
+  "correct_index": 0,
+  "explanation": "sleep → slept. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "speak",
+  "hint": "",
+  "options": [
+   "spoke",
+   "speaked",
+   "spoken",
+   "spake"
+  ],
+  "correct_index": 0,
+  "explanation": "speak → spoke. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "stand",
+  "hint": "",
+  "options": [
+   "stood",
+   "standed",
+   "stooded",
+   "stand"
+  ],
+  "correct_index": 0,
+  "explanation": "stand → stood. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "teach",
+  "hint": "",
+  "options": [
+   "taught",
+   "teached",
+   "thought",
+   "teatched"
+  ],
+  "correct_index": 0,
+  "explanation": "teach → taught. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "tell",
+  "hint": "",
+  "options": [
+   "told",
+   "telled",
+   "tolled",
+   "toll"
+  ],
+  "correct_index": 0,
+  "explanation": "tell → told. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "understand",
+  "hint": "",
+  "options": [
+   "understood",
+   "understanded",
+   "understud",
+   "understandt"
+  ],
+  "correct_index": 0,
+  "explanation": "understand → understood. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "wake",
+  "hint": "",
+  "options": [
+   "woke",
+   "waked",
+   "woken",
+   "waken"
+  ],
+  "correct_index": 0,
+  "explanation": "wake → woke. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "wear",
+  "hint": "",
+  "options": [
+   "wore",
+   "weared",
+   "worn",
+   "weard"
+  ],
+  "correct_index": 0,
+  "explanation": "wear → wore. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "win",
+  "hint": "",
+  "options": [
+   "won",
+   "winned",
+   "wan",
+   "wonned"
+  ],
+  "correct_index": 0,
+  "explanation": "win → won. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "bring",
+  "hint": "",
+  "options": [
+   "brought",
+   "bringed",
+   "brang",
+   "broughted"
+  ],
+  "correct_index": 0,
+  "explanation": "bring → brought. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "catch",
+  "hint": "",
+  "options": [
+   "caught",
+   "catched",
+   "cought",
+   "caughted"
+  ],
+  "correct_index": 0,
+  "explanation": "catch → caught. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "find",
+  "hint": "",
+  "options": [
+   "found",
+   "finded",
+   "fund",
+   "founded"
+  ],
+  "correct_index": 0,
+  "explanation": "find → found. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "irregular",
+  "prompt": "sit",
+  "hint": "",
+  "options": [
+   "sat",
+   "sitted",
+   "sited",
+   "sate"
+  ],
+  "correct_index": 0,
+  "explanation": "sit → sat. Irregular verbs don't take -ed."
+ },
+ {
+  "kind": "sort",
+  "prompt": "play",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "play → played. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "study",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "study → studied. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "visit",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "visit → visited. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "stop",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "stop → stopped. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "watch",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "watch → watched. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "dance",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "dance → danced. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "cook",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "cook → cooked. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "travel",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "travel → traveled. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "walk",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "walk → walked. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "clean",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "clean → cleaned. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "open",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "open → opened. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "close",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "close → closed. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "listen",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "listen → listened. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "talk",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "talk → talked. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "want",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "want → wanted. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "need",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "need → needed. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "arrive",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "arrive → arrived. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "finish",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "finish → finished. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "start",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "start → started. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "help",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "help → helped. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "call",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "call → called. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "live",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "live → lived. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "like",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "like → liked. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "try",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "try → tried. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "plan",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "plan → planned. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "move",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "move → moved. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "jump",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "jump → jumped. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "work",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "work → worked. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "enjoy",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "enjoy → enjoyed. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "carry",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 0,
+  "explanation": "carry → carried. It adds -ed, so it's regular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "go",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "go → went. It changes form, so it's irregular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "eat",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "eat → ate. It changes form, so it's irregular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "buy",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "buy → bought. It changes form, so it's irregular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "take",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "take → took. It changes form, so it's irregular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "see",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "see → saw. It changes form, so it's irregular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "write",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "write → wrote. It changes form, so it's irregular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "run",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "run → ran. It changes form, so it's irregular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "drink",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "drink → drank. It changes form, so it's irregular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "swim",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "swim → swam. It changes form, so it's irregular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "sing",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "sing → sang. It changes form, so it's irregular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "fly",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "fly → flew. It changes form, so it's irregular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "give",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "give → gave. It changes form, so it's irregular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "sleep",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "sleep → slept. It changes form, so it's irregular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "sit",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "sit → sat. It changes form, so it's irregular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "win",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "win → won. It changes form, so it's irregular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "make",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "make → made. It changes form, so it's irregular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "come",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "come → came. It changes form, so it's irregular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "get",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "get → got. It changes form, so it's irregular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "find",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "find → found. It changes form, so it's irregular."
+ },
+ {
+  "kind": "sort",
+  "prompt": "teach",
+  "hint": "",
+  "options": [
+   "Regular",
+   "Irregular"
+  ],
+  "correct_index": 1,
+  "explanation": "teach → taught. It changes form, so it's irregular."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "She walked to school yesterday.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 0,
+  "explanation": "walked = walk + -ed."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "We didn't watch TV last night.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 0,
+  "explanation": "didn't + base verb is a past negative."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "Did you call your mom?",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 0,
+  "explanation": "Did + subject + base verb is a past question."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "He wrote a letter to his friend.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 0,
+  "explanation": "wrote is the past of write."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "I was very tired after work.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 0,
+  "explanation": "was is the past of be."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "The kids ran to the park.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 0,
+  "explanation": "ran is the past of run."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "They visited their grandparents.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 0,
+  "explanation": "visited = visit + -ed."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "My phone stopped working.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 0,
+  "explanation": "stopped = stop + -ed."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "Were you at home on Saturday?",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 0,
+  "explanation": "Were is the past of be in a question."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "We had pizza for dinner.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 0,
+  "explanation": "had is the past of have."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "She didn't like the movie.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 0,
+  "explanation": "didn't like is a past negative."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "I lost my keys this morning.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 0,
+  "explanation": "lost is the past of lose."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "Did they win the game?",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 0,
+  "explanation": "Did + they + win is a past question."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "The bus arrived late.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 0,
+  "explanation": "arrived = arrive + -d."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "She walks to school every day.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 1,
+  "explanation": "walks is Present Simple. Past: she walked."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "They are eating pizza now.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 1,
+  "explanation": "are eating is Present Continuous. Past: they ate."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "I will visit my aunt tomorrow.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 1,
+  "explanation": "will visit is future. Past: I visited."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "Do you like tacos?",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 1,
+  "explanation": "Do makes a present question. Past: Did you like…?"
+ },
+ {
+  "kind": "swipe",
+  "prompt": "My brother plays soccer on Sundays.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 1,
+  "explanation": "plays is Present Simple. Past: he played."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "Does she speak English?",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 1,
+  "explanation": "Does makes a present question. Past: Did she speak…?"
+ },
+ {
+  "kind": "swipe",
+  "prompt": "We are going to travel next year.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 1,
+  "explanation": "going to is future. Past: we traveled."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "He is sleeping right now.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 1,
+  "explanation": "is sleeping is Present Continuous. Past: he slept."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "I have a new phone.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 1,
+  "explanation": "have is present. Past: I had."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "They don't like coffee.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 1,
+  "explanation": "don't makes a present negative. Past: didn't like."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "She can swim very well.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 1,
+  "explanation": "can is present. Past: she could swim."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "Look! It's raining.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 1,
+  "explanation": "is raining is Present Continuous. Past: it rained."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "I usually take the bus.",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 1,
+  "explanation": "take is present. Past: I took the bus."
+ },
+ {
+  "kind": "swipe",
+  "prompt": "Are you ready?",
+  "hint": "",
+  "options": [
+   "Yes, Simple Past",
+   "No, not past"
+  ],
+  "correct_index": 1,
+  "explanation": "Are is present. Past: Were you ready?"
+ },
+ {
+  "kind": "fill",
+  "prompt": "Last night, I ____ a great movie.",
+  "hint": "watch",
+  "options": [
+   "watched",
+   "watch",
+   "watching",
+   "watchd"
+  ],
+  "correct_index": 0,
+  "explanation": "Regular verb: watch + -ed."
+ },
+ {
+  "kind": "fill",
+  "prompt": "Yesterday, she ____ to the supermarket.",
+  "hint": "go",
+  "options": [
+   "went",
+   "goed",
+   "go",
+   "gone"
+  ],
+  "correct_index": 0,
+  "explanation": "go is irregular: went."
+ },
+ {
+  "kind": "fill",
+  "prompt": "We ____ dinner at 7 p.m.",
+  "hint": "have",
+  "options": [
+   "had",
+   "haved",
+   "has",
+   "have"
+  ],
+  "correct_index": 0,
+  "explanation": "have is irregular: had."
+ },
+ {
+  "kind": "fill",
+  "prompt": "He ____ his keys this morning.",
+  "hint": "lose",
+  "options": [
+   "lost",
+   "losed",
+   "lose",
+   "loosed"
+  ],
+  "correct_index": 0,
+  "explanation": "lose is irregular: lost."
+ },
+ {
+  "kind": "fill",
+  "prompt": "They ____ English for two hours.",
+  "hint": "study",
+  "options": [
+   "studied",
+   "studyed",
+   "study",
+   "studies"
+  ],
+  "correct_index": 0,
+  "explanation": "Consonant + y changes to -ied."
+ },
+ {
+  "kind": "fill",
+  "prompt": "I ____ my homework last week.",
+  "hint": "not / finish",
+  "options": [
+   "didn't finish",
+   "didn't finished",
+   "not finished",
+   "don't finish"
+  ],
+  "correct_index": 0,
+  "explanation": "Negative: didn't + base verb."
+ },
+ {
+  "kind": "fill",
+  "prompt": "The concert ____ amazing!",
+  "hint": "be",
+  "options": [
+   "was",
+   "were",
+   "is",
+   "be"
+  ],
+  "correct_index": 0,
+  "explanation": "it / the concert takes was."
+ },
+ {
+  "kind": "fill",
+  "prompt": "My friends ____ at the party.",
+  "hint": "be",
+  "options": [
+   "were",
+   "was",
+   "are",
+   "be"
+  ],
+  "correct_index": 0,
+  "explanation": "they / my friends takes were."
+ },
+ {
+  "kind": "fill",
+  "prompt": "She ____ the bus to work.",
+  "hint": "take",
+  "options": [
+   "took",
+   "taked",
+   "take",
+   "taken"
+  ],
+  "correct_index": 0,
+  "explanation": "take is irregular: took."
+ },
+ {
+  "kind": "fill",
+  "prompt": "The train ____ at 9 o'clock.",
+  "hint": "stop",
+  "options": [
+   "stopped",
+   "stoped",
+   "stop",
+   "stopt"
+  ],
+  "correct_index": 0,
+  "explanation": "Short verb, vowel + consonant: double it."
+ },
+ {
+  "kind": "fill",
+  "prompt": "My mom ____ a delicious cake.",
+  "hint": "make",
+  "options": [
+   "made",
+   "maked",
+   "makes",
+   "maded"
+  ],
+  "correct_index": 0,
+  "explanation": "make is irregular: made."
+ },
+ {
+  "kind": "fill",
+  "prompt": "We ____ to Mexico in December.",
+  "hint": "travel",
+  "options": [
+   "traveled",
+   "traveling",
+   "travels",
+   "travelt"
+  ],
+  "correct_index": 0,
+  "explanation": "Regular verb: travel + -ed."
+ },
+ {
+  "kind": "fill",
+  "prompt": "I ____ a strange noise last night.",
+  "hint": "hear",
+  "options": [
+   "heard",
+   "heared",
+   "hear",
+   "herd"
+  ],
+  "correct_index": 0,
+  "explanation": "hear is irregular: heard."
+ },
+ {
+  "kind": "fill",
+  "prompt": "Our team ____ the race.",
+  "hint": "win",
+  "options": [
+   "won",
+   "winned",
+   "win",
+   "wan"
+  ],
+  "correct_index": 0,
+  "explanation": "win is irregular: won."
+ },
+ {
+  "kind": "fill",
+  "prompt": "He ____ me a gift for my birthday.",
+  "hint": "give",
+  "options": [
+   "gave",
+   "gived",
+   "give",
+   "given"
+  ],
+  "correct_index": 0,
+  "explanation": "give is irregular: gave."
+ },
+ {
+  "kind": "fill",
+  "prompt": "I ____ my best friend at school.",
+  "hint": "meet",
+  "options": [
+   "met",
+   "meeted",
+   "meet",
+   "meat"
+  ],
+  "correct_index": 0,
+  "explanation": "meet is irregular: met."
+ },
+ {
+  "kind": "fill",
+  "prompt": "She ____ three glasses of water.",
+  "hint": "drink",
+  "options": [
+   "drank",
+   "drinked",
+   "drunk",
+   "drink"
+  ],
+  "correct_index": 0,
+  "explanation": "drink is irregular: drank."
+ },
+ {
+  "kind": "fill",
+  "prompt": "We ____ in the pool for an hour.",
+  "hint": "swim",
+  "options": [
+   "swam",
+   "swimmed",
+   "swum",
+   "swim"
+  ],
+  "correct_index": 0,
+  "explanation": "swim is irregular: swam."
+ },
+ {
+  "kind": "fill",
+  "prompt": "The baby ____ all night.",
+  "hint": "cry",
+  "options": [
+   "cried",
+   "cryed",
+   "cries",
+   "cry"
+  ],
+  "correct_index": 0,
+  "explanation": "Consonant + y changes to -ied: cried."
+ },
+ {
+  "kind": "fill",
+  "prompt": "I ____ the answer.",
+  "hint": "not / know",
+  "options": [
+   "didn't know",
+   "didn't knew",
+   "not knew",
+   "don't knew"
+  ],
+  "correct_index": 0,
+  "explanation": "Negative: didn't + base verb."
+ },
+ {
+  "kind": "fill",
+  "prompt": "The movie ____ at 8 p.m.",
+  "hint": "start",
+  "options": [
+   "started",
+   "startted",
+   "starting",
+   "start"
+  ],
+  "correct_index": 0,
+  "explanation": "Regular verb: start + -ed."
+ },
+ {
+  "kind": "fill",
+  "prompt": "He ____ his car to work.",
+  "hint": "drive",
+  "options": [
+   "drove",
+   "drived",
+   "driven",
+   "drive"
+  ],
+  "correct_index": 0,
+  "explanation": "drive is irregular: drove."
+ },
+ {
+  "kind": "fill",
+  "prompt": "I ____ very happy yesterday.",
+  "hint": "be",
+  "options": [
+   "was",
+   "were",
+   "am",
+   "be"
+  ],
+  "correct_index": 0,
+  "explanation": "I takes was."
+ },
+ {
+  "kind": "fill",
+  "prompt": "We ____ a lot of photos.",
+  "hint": "take",
+  "options": [
+   "took",
+   "taked",
+   "taken",
+   "takes"
+  ],
+  "correct_index": 0,
+  "explanation": "take is irregular: took."
+ },
+ {
+  "kind": "fill",
+  "prompt": "She ____ a song at the party.",
+  "hint": "sing",
+  "options": [
+   "sang",
+   "singed",
+   "sung",
+   "sings"
+  ],
+  "correct_index": 0,
+  "explanation": "sing is irregular: sang."
+ },
+ {
+  "kind": "fill",
+  "prompt": "They ____ the window because it was cold.",
+  "hint": "close",
+  "options": [
+   "closed",
+   "closeed",
+   "close",
+   "closing"
+  ],
+  "correct_index": 0,
+  "explanation": "Verb ends in -e: add -d."
+ },
+ {
+  "kind": "fill",
+  "prompt": "My dog ____ my homework!",
+  "hint": "eat",
+  "options": [
+   "ate",
+   "eated",
+   "eaten",
+   "eats"
+  ],
+  "correct_index": 0,
+  "explanation": "eat is irregular: ate."
+ },
+ {
+  "kind": "fill",
+  "prompt": "You ____ right about the test.",
+  "hint": "be",
+  "options": [
+   "were",
+   "was",
+   "are",
+   "be"
+  ],
+  "correct_index": 0,
+  "explanation": "you takes were."
+ },
+ {
+  "kind": "fill",
+  "prompt": "She ____ her phone at home.",
+  "hint": "forget",
+  "options": [
+   "forgot",
+   "forgetted",
+   "forgotten",
+   "forget"
+  ],
+  "correct_index": 0,
+  "explanation": "forget is irregular: forgot."
+ },
+ {
+  "kind": "fill",
+  "prompt": "We ____ the museum last Sunday.",
+  "hint": "visit",
+  "options": [
+   "visited",
+   "visitted",
+   "visit",
+   "visiting"
+  ],
+  "correct_index": 0,
+  "explanation": "Regular verb: visit + -ed."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "I didn't go to class.",
+   "I didn't went to class.",
+   "I don't went to class.",
+   "I not go to class."
+  ],
+  "correct_index": 0,
+  "explanation": "After didn't, use the base verb: go."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "Did you see the game?",
+   "Did you saw the game?",
+   "Do you saw the game?",
+   "You did see the game?"
+  ],
+  "correct_index": 0,
+  "explanation": "Did + subject + base verb."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "She studied all night.",
+   "She studyed all night.",
+   "She studyied all night.",
+   "She studed all night."
+  ],
+  "correct_index": 0,
+  "explanation": "study → studied."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "We were at the beach.",
+   "We was at the beach.",
+   "We wased at the beach.",
+   "We did be at the beach."
+  ],
+  "correct_index": 0,
+  "explanation": "Use were with we, you and they."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "He stopped the car.",
+   "He stoped the car.",
+   "He stopt the car.",
+   "He stopping the car."
+  ],
+  "correct_index": 0,
+  "explanation": "stop → stopped: double the p."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "Where were you last night?",
+   "Where did you were last night?",
+   "Where you were last night?",
+   "Where did you be last night?"
+  ],
+  "correct_index": 0,
+  "explanation": "Questions with was / were don't use did."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "They didn't buy the tickets.",
+   "They didn't bought the tickets.",
+   "They don't bought the tickets.",
+   "They not buyed the tickets."
+  ],
+  "correct_index": 0,
+  "explanation": "didn't + base verb: didn't buy."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "Did she call you?",
+   "Did she called you?",
+   "Does she called you?",
+   "She did called you?"
+  ],
+  "correct_index": 0,
+  "explanation": "After did, use the base verb: call."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "We went to the beach last summer.",
+   "We goed to the beach last summer.",
+   "We go to the beach last summer.",
+   "We gone to the beach last summer."
+  ],
+  "correct_index": 0,
+  "explanation": "go → went."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "My parents were very happy.",
+   "My parents was very happy.",
+   "My parents wered very happy.",
+   "My parents did be very happy."
+  ],
+  "correct_index": 0,
+  "explanation": "they / my parents takes were."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "He didn't play soccer.",
+   "He didn't played soccer.",
+   "He doesn't played soccer.",
+   "He not played soccer."
+  ],
+  "correct_index": 0,
+  "explanation": "didn't + base verb: didn't play."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "What did you eat?",
+   "What did you ate?",
+   "What you ate?",
+   "What do you ated?"
+  ],
+  "correct_index": 0,
+  "explanation": "Wh- word + did + subject + base verb."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "She cried at the end of the movie.",
+   "She cryed at the end of the movie.",
+   "She cryied at the end of the movie.",
+   "She crys at the end of the movie."
+  ],
+  "correct_index": 0,
+  "explanation": "cry → cried."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "I bought a new jacket yesterday.",
+   "I buyed a new jacket yesterday.",
+   "I buy a new jacket yesterday.",
+   "I boughted a new jacket yesterday."
+  ],
+  "correct_index": 0,
+  "explanation": "buy → bought."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "Was it cold yesterday?",
+   "Did it was cold yesterday?",
+   "Were it cold yesterday?",
+   "Was it colded yesterday?"
+  ],
+  "correct_index": 0,
+  "explanation": "it takes was, and no did with be."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "They planned a big party.",
+   "They planed a big party.",
+   "They plannd a big party.",
+   "They planning a big party."
+  ],
+  "correct_index": 0,
+  "explanation": "plan → planned: double the n."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "Did he finish the test?",
+   "Did he finished the test?",
+   "Does he finished the test?",
+   "He did finished the test?"
+  ],
+  "correct_index": 0,
+  "explanation": "After did, use the base verb: finish."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "I didn't see you at school.",
+   "I didn't saw you at school.",
+   "I not saw you at school.",
+   "I don't saw you at school."
+  ],
+  "correct_index": 0,
+  "explanation": "didn't + base verb: didn't see."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "We arrived at 6 p.m.",
+   "We arrivedd at 6 p.m.",
+   "We arriveed at 6 p.m.",
+   "We did arrived at 6 p.m."
+  ],
+  "correct_index": 0,
+  "explanation": "arrive ends in -e, so add -d."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "Where did they live?",
+   "Where did they lived?",
+   "Where they lived?",
+   "Where do they lived?"
+  ],
+  "correct_index": 0,
+  "explanation": "Wh- word + did + subject + base verb."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "She wasn't at home.",
+   "She weren't at home.",
+   "She didn't was at home.",
+   "She not was at home."
+  ],
+  "correct_index": 0,
+  "explanation": "she takes wasn't."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "The children played outside.",
+   "The children plaied outside.",
+   "The children playd outside.",
+   "The children playing outside."
+  ],
+  "correct_index": 0,
+  "explanation": "Vowel + y: just add -ed. played."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "You were right.",
+   "You was right.",
+   "You wered right.",
+   "You did be right."
+  ],
+  "correct_index": 0,
+  "explanation": "you takes were."
+ },
+ {
+  "kind": "fix",
+  "prompt": "Which sentence is correct?",
+  "hint": "",
+  "options": [
+   "He taught us English.",
+   "He teached us English.",
+   "He thought us English.",
+   "He teach us English last year."
+  ],
+  "correct_index": 0,
+  "explanation": "teach → taught."
+ }
+]

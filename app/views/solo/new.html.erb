@@ -1,0 +1,18 @@
+<% content_for :title, "Play solo" %>
+<div class="narrow">
+  <div class="kicker">Play solo</div>
+  <h1 class="big">Ready to go <em>back?</em></h1>
+  <%= form_with url: solo_index_path, class: "stack" do %>
+    <label class="field"><span class="label">Your name</span><%= text_field_tag :name, nil, maxlength: 22, required: true, placeholder: "Type your name", autocomplete: "off" %></label>
+    <div class="field">
+      <span class="label">Questions</span>
+      <div class="seg">
+        <% [5, 10, 15, 20].each do |n| %>
+          <label><%= radio_button_tag :count, n, n == 10 %><span><%= n %></span></label>
+        <% end %>
+      </div>
+    </div>
+    <%= render "shared/kinds", prefix: "solo_new" %>
+    <%= submit_tag "Start playing", class: "btn" %>
+  <% end %>
+</div>

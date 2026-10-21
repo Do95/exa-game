@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= content_for(:title) ? "#{content_for(:title)} · Flashback" : "Flashback · Escuela Americana Extension" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Aplicación educativa de Escuela Americana Extension para practicar el Simple Past en inglés.">
+    <meta name="author" content="Equipo 2">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= turbo_refreshes_with method: :morph, scroll: :preserve %>
+    <%= yield :head %>
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap">
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header class="bar">
+        <%= link_to root_path, class: "brandwrap", aria: { label: "Flashback home" } do %>
+          <%= image_tag "logo.png", class: "logo", alt: "Escuela Americana Extension", width: 208, height: 60 %>
+          <span class="brandtext"><span class="tag">Aplicación educativa</span><span class="brand">Flash<span>back</span></span></span>
+        <% end %>
+        <nav class="nav">
+          <%= link_to "Play", root_path %>
+          <%= link_to "Join", join_path %>
+          <%= link_to "Scores", scores_path %>
+          <%= link_to "Teacher", admin_root_path, class: "muted" %>
+        </nav>
+      </header>
+
+      <% if notice || alert %>
+        <div class="flash <%= alert ? "flash-alert" : "" %>" role="status"><%= notice || alert %></div>
+      <% end %>
+
+      <main class="card <%= content_for(:card_class) %>">
+        <%= yield %>
+      </main>
+
+      <footer class="foot">
+        <span>Aplicación educativa de <b>Escuela Americana Extension</b></span>
+        <span>Inglés · Simple Past · Creado por <b>Equipo 2</b></span>
+      </footer>
+    </div>
+  </body>
+</html>

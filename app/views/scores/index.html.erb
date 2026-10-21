@@ -1,0 +1,24 @@
+<% content_for :title, "Scores" %>
+<%= turbo_stream_from "leaderboard" %>
+<section class="screen">
+  <div class="boardtop">
+    <div>
+      <div class="kicker"><span class="live"></span> Live leaderboard</div>
+      <h1 class="big">Top <em>players</em></h1>
+    </div>
+    <nav class="tabs">
+      <% ScoresController::RANGES.each do |key, label| %>
+        <%= link_to label, scores_path(range: key), class: ("on" if key == @range) %>
+      <% end %>
+    </nav>
+  </div>
+  <p class="lead">Scores update by themselves as students play.</p>
+  <div class="lb-big">
+    <%= render "shared/leaderboard", participants: @participants, show_mode: true %>
+  </div>
+  <% if admin? %>
+    <div class="row end">
+      <%= button_to "Clear all scores", admin_scores_path, method: :delete, class: "btn btn-alt", form: { data: { turbo_confirm: "Delete every score and game? Questions are kept." } } %>
+    </div>
+  <% end %>
+</section>

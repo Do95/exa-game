@@ -1,0 +1,91 @@
+<% content_for :title, "Solo game" %>
+<% p = @participant %>
+<div class="gamebar">
+  <span class="chip-name"><span class="dot"></span><%= p.name %></span>
+  <span class="chip-score"><b><%= p.score %></b> pts</span>
+</div>
+<div class="progress"><i style="width: <%= percent([p.current_index + (@answer ? 1 : 0), @game.total].min, @game.total) %>%"></i></div>
+
+<% if p.solo_finished? %>
+  <%= turbo_stream_from "leaderboard" %>
+  <section class="screen center" data-controller="confetti" data-confetti-amount-value="160">
+    <div class="kicker">Game over</div>
+    <h1 class="big"><%= p.score %> <em>points</em></h1>
+    <p class="lead center-block">You got <b><%= p.correct_count %> of <%= @game.total %></b> right (<%= percent(p.correct_count, @game.total) %>%).</p>
+    <div class="row center-row">
+      <%= form_with url: solo_index_path do %>
+        <%= hidden_field_tag :name, p.name %>
+        <%= hidden_field_tag :count, @game.total %>
+        <% Question.where(id: @game.question_ids).distinct.pluck(:kind).each do |k| %><%= hidden_field_tag "kinds[]", k, id: nil %><% end %>
+        <%= submit_tag "Play again", class: "btn" %>
+      <% end %>
+      <%= link_to "Home", root_path, class: "btn btn-alt" %>
+    </div>
+  </section>
+
+  <div class="two-col">
+    <section>
+      <h3 class="label">Your answers</h3>
+      <ol class="review">
+        <% p.answers.includes(:question).order(:position).each do |a| %>
+          <li class="<%= a.correct ? "ok" : "no" %>">
+            <span class="mark"><%= a.correct ? "✓" : "✗" %></span>
+            <div>
+              <b><%= a.question.kind == "fill" ? a.question.prompt.sub("____", "___") : a.question.prompt %></b>
+              <small>
+                <% if a.correct %>
+                  <%= a.question.correct_option %> · +<%= a.points %>
+                <% else %>
+                  You: <%= a.choice.negative? ? "no answer" : a.question.options[a.choice] %> · Correct: <%= a.question.correct_option %>
+                <% end %>
+              </small>
+            </div>
+          </li>
+        <% end %>
+      </ol>
+    </section>
+    <section>
+      <h3 class="label"><span class="live"></span>Today's leaderboard</h3>
+      <%= render "shared/leaderboard", participants: Participant.where(created_at: Time.current.all_day).where("answered_count > 0").order(score: :desc).limit(10), highlight: p, show_mode: true %>
+    </section>
+  </div>
+
+<% elsif @answer %>
+  <% q = @question %>
+  <section class="screen" <%= "data-controller=confetti" if @answer.correct %>>
+    <div class="meta"><span><%= q.kind_label %></span><span class="pill"><%= p.current_index + 1 %> / <%= @game.total %></span></div>
+    <%= question_prompt(q) %>
+    <div class="answers">
+      <% q.options.each_with_index do |opt, i| %>
+        <div class="ans <%= i == q.correct_index ? "right" : (i == @answer.choice ? "bad" : "dim") %>" data-i="<%= i %>"><%= option_tag_contents(opt, i) %></div>
+      <% end %>
+    </div>
+    <div class="feedback <%= @answer.correct ? "ok" : "no" %>">
+      <div>
+        <h3><%= @answer.correct ? "Correct! +#{@answer.points}" : (@answer.choice.negative? ? "Time's up" : "Not quite") %></h3>
+        <p><b>Answer: <%= q.correct_option %>.</b> <%= q.explanation %></p>
+      </div>
+      <%= button_to (p.current_index + 1 >= @game.total ? "See results" : "Next"), next_solo_path(@game), class: "btn #{"btn-good" if @answer.correct}", form: { data: { turbo_submits_with: "…" } }, autofocus: true %>
+    </div>
+  </section>
+
+<% else %>
+  <% q = @question %>
+  <section class="screen">
+    <div class="meta"><span><%= q.kind_label %></span><span class="pill"><%= p.current_index + 1 %> / <%= @game.total %></span></div>
+    <div class="qhead">
+      <div><%= question_prompt(q) %><p class="sub"><%= q.instruction %></p></div>
+      <%= countdown(seconds: p.seconds_left, total: q.time_limit, submit: "timeout-form") %>
+    </div>
+    <%= form_with url: answer_solo_path(@game), class: "answers", data: { turbo_submits_with: nil } do %>
+      <%= hidden_field_tag :position, p.current_index %>
+      <% q.options.each_with_index do |opt, i| %>
+        <button type="submit" name="choice" value="<%= i %>" class="ans" data-i="<%= i %>" style="--i:<%= i %>"><%= option_tag_contents(opt, i) %></button>
+      <% end %>
+    <% end %>
+    <%= form_with url: answer_solo_path(@game), id: "timeout-form", hidden: true do %>
+      <%= hidden_field_tag :position, p.current_index, id: nil %>
+      <%= hidden_field_tag :choice, -1, id: nil %>
+    <% end %>
+  </section>
+<% end %>

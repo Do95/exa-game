@@ -1,0 +1,11 @@
+<% content_for :title, "Join a live game" %>
+<div class="narrow">
+  <div class="kicker">Live game</div>
+  <h1 class="big">Join the <em>game</em></h1>
+  <p class="lead">Type the code your teacher shows on the board.</p>
+  <%= form_with url: join_path, class: "stack" do %>
+    <label class="field"><span class="label">Game code</span><%= text_field_tag :code, @code, maxlength: 5, required: true, placeholder: "ABCDE", class: "code-input", autocomplete: "off", autocapitalize: "characters" %></label>
+    <label class="field"><span class="label">Your name</span><%= text_field_tag :name, params[:name], maxlength: 22, required: true, placeholder: "Type your name", autocomplete: "off", autofocus: @code.present? %></label>
+    <%= submit_tag "Join", class: "btn btn-red", data: { turbo_submits_with: "Joining…" } %>
+  <% end %>
+</div>

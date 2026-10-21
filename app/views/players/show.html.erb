@@ -1,0 +1,71 @@
+<% content_for :title, "Live game #{@game.code}" %>
+<%= turbo_stream_from @game %>
+<% p = @participant %>
+<div class="gamebar">
+  <span class="chip-name"><span class="dot"></span><%= p.name %></span>
+  <span class="chip-score"><b><%= p.score %></b> pts</span>
+</div>
+
+<% case @game.status %>
+<% when "lobby" %>
+  <section class="screen wait">
+    <div>
+      <div class="kicker">Game <%= @game.code %></div>
+      <h1 class="big">You're <em>in!</em></h1>
+      <p class="lead center-block">Look at the board. The game starts when your teacher presses Start.</p>
+      <p class="note"><%= pluralize(@game.participants.count, "player") %> connected</p>
+      <div class="dots"><i></i><i></i><i></i></div>
+    </div>
+  </section>
+
+<% when "question" %>
+  <% q = @question %>
+  <% if @answer %>
+    <section class="screen wait">
+      <div>
+        <div class="kicker">Question <%= @game.current_index + 1 %> / <%= @game.total %></div>
+        <h1 class="big">Answer <em>sent!</em></h1>
+        <p class="lead center-block">Wait for the others…</p>
+        <div class="dots"><i></i><i></i><i></i></div>
+      </div>
+    </section>
+  <% else %>
+    <section class="screen">
+      <div class="meta"><span><%= q.kind_label %></span><span class="pill"><%= @game.current_index + 1 %> / <%= @game.total %></span></div>
+      <div class="qhead">
+        <div><%= question_prompt(q, size: :small) %><p class="sub"><%= q.instruction %></p></div>
+        <%= countdown(seconds: @game.seconds_left, total: q.time_limit) %>
+      </div>
+      <%= form_with url: play_answer_path(@game), class: "answers answers-pad" do %>
+        <%= hidden_field_tag :position, @game.current_index %>
+        <% q.options.each_with_index do |opt, i| %>
+          <button type="submit" name="choice" value="<%= i %>" class="ans" data-i="<%= i %>" style="--i:<%= i %>"><%= option_tag_contents(opt, i) %></button>
+        <% end %>
+      <% end %>
+    </section>
+  <% end %>
+
+<% when "reveal" %>
+  <% q = @question %>
+  <% ok = @answer&.correct %>
+  <section class="screen result <%= ok ? "ok" : "no" %>" <%= "data-controller=confetti" if ok %>>
+    <div>
+      <div class="icon"><%= ok ? "✓" : "✗" %></div>
+      <h2><%= ok ? "Correct!" : (@answer ? "Not quite" : "Time's up") %></h2>
+      <p>Answer: <b><%= q.correct_option %></b></p>
+      <div class="pts"><%= "+#{@answer.points} · " if @answer&.points.to_i.positive? %><%= p.score %> points</div>
+      <p>You're in place <b><%= p.rank %></b> of <%= @game.participants.count %></p>
+    </div>
+  </section>
+
+<% when "finished" %>
+  <section class="screen result ok" data-controller="confetti" data-confetti-amount-value="<%= p.rank <= 3 ? 180 : 60 %>">
+    <div>
+      <div class="kicker">Game over</div>
+      <h1 class="big">Place <em><%= p.rank %></em></h1>
+      <div class="pts"><%= p.score %> points · <%= p.correct_count %>/<%= @game.total %> correct</div>
+      <p>Look at the board for the podium.</p>
+      <p><%= link_to "Back to Flashback", root_path, class: "btn btn-alt" %></p>
+    </div>
+  </section>
+<% end %>

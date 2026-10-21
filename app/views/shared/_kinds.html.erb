@@ -1,0 +1,11 @@
+<%# Checkboxes to choose the kinds of challenges (all on by default). %>
+<fieldset class="kinds">
+  <legend class="label">Challenge types</legend>
+  <% Question::KINDS.each_with_index do |(key, info), i| %>
+    <label class="kind" style="--i:<%= i %>">
+      <%= check_box_tag "kinds[]", key, true, id: "#{prefix}_kind_#{key}" %>
+      <span class="tick" aria-hidden="true">✓</span>
+      <span><b><%= info[:label] %></b><small><%= info[:instruction] %></small></span>
+    </label>
+  <% end %>
+</fieldset>

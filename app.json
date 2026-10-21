@@ -1,0 +1,16 @@
+{
+  "name": "Flashback",
+  "description": "Aplicación educativa de Escuela Americana Extension para practicar el Simple Past. Creado por Equipo 2.",
+  "keywords": ["rails", "education", "english", "quiz"],
+  "stack": "heroku-24",
+  "buildpacks": [{ "url": "heroku/ruby" }],
+  "addons": [{ "plan": "heroku-postgresql:essential-0" }],
+  "formation": { "web": { "quantity": 1, "size": "basic" } },
+  "env": {
+    "ADMIN_USER": { "description": "Username for the teacher area", "value": "admin" },
+    "ADMIN_PASSWORD": { "description": "Password for the teacher area (/admin and hosting live games)", "generator": "secret" },
+    "SECRET_KEY_BASE": { "description": "Secret used by Rails", "generator": "secret" },
+    "FORCE_SSL": { "description": "Redirect every visit to https", "value": "true" }
+  },
+  "scripts": { "postdeploy": "bin/rails db:seed" }
+}

@@ -1,0 +1,75 @@
+<% content_for :title, "Questions" %>
+<section class="screen">
+  <div class="boardtop">
+    <div>
+      <div class="kicker">Teacher area</div>
+      <h1 class="big">Question <em>bank</em></h1>
+    </div>
+    <div class="row">
+      <%= link_to "New question", new_admin_question_path(kind: @kind), class: "btn" %>
+      <%= link_to "Host a live game", new_host_path, class: "btn btn-red" %>
+    </div>
+  </div>
+
+  <nav class="tabs">
+    <%= link_to "All · #{@counts.values.sum}", admin_questions_path(q: @q.presence), class: ("on" unless @kind) %>
+    <% Question::KINDS.each do |key, info| %>
+      <%= link_to "#{info[:label]} · #{@active_counts[key].to_i}/#{@counts[key].to_i}", admin_questions_path(kind: key, q: @q.presence), class: ("on" if @kind == key) %>
+    <% end %>
+  </nav>
+
+  <%= form_with url: admin_questions_path, method: :get, class: "search", data: { turbo_frame: "_top" } do %>
+    <%= hidden_field_tag :kind, @kind if @kind %>
+    <%= search_field_tag :q, @q, placeholder: "Search questions…", aria: { label: "Search questions" } %>
+    <%= submit_tag "Search", class: "btn btn-alt", name: nil %>
+  <% end %>
+
+  <div class="table-wrap">
+    <table class="qtable">
+      <thead><tr><th>Type</th><th>Question</th><th>Correct answer</th><th>Time</th><th>Active</th><th></th></tr></thead>
+      <tbody>
+        <% @questions.each do |q| %>
+          <tr class="<%= "off" unless q.active %>" id="<%= dom_id(q) %>">
+            <td><span class="badge"><%= q.kind_label %></span></td>
+            <td><b><%= q.prompt %></b><%= tag.small(" (#{q.hint})") if q.hint.present? %><br><small class="muted"><%= q.options.join(" · ") %></small></td>
+            <td><%= q.correct_option %></td>
+            <td><%= q.time_limit %>s</td>
+            <td><%= button_to (q.active ? "On" : "Off"), toggle_admin_question_path(q), method: :patch, class: "toggle #{"on" if q.active}" %></td>
+            <td class="actions">
+              <%= link_to "Edit", edit_admin_question_path(q), class: "linkish" %>
+              <%= button_to "Delete", admin_question_path(q), method: :delete, class: "linkish danger", form: { data: { turbo_confirm: "Delete this question?" } } %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <% if @questions.empty? %><p class="empty">No questions match.</p><% end %>
+  </div>
+
+  <div class="two-col">
+    <div class="box">
+      <h3 class="label">Recent live games</h3>
+      <% if @games.empty? %>
+        <p class="empty">No live games yet.</p>
+      <% else %>
+        <ul class="games">
+          <% @games.each do |g| %>
+            <li>
+              <%= link_to g.code, host_path(g), class: "code" %>
+              <span><%= g.status.humanize %> · <%= pluralize(g.participants.count, "player") %> · <%= l(g.created_at, format: :short) %></span>
+              <%= button_to "Delete", admin_game_path(g), method: :delete, class: "linkish danger", form: { data: { turbo_confirm: "Delete game #{g.code} and its scores?" } } %>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+    <div class="box">
+      <h3 class="label">Scores</h3>
+      <p class="note">See every score, or clear them all before a new class.</p>
+      <div class="row">
+        <%= link_to "Open leaderboard", scores_path, class: "btn btn-alt" %>
+        <%= button_to "Clear all scores", admin_scores_path, method: :delete, class: "btn btn-alt", form: { data: { turbo_confirm: "Delete every score and game? Questions are kept." } } %>
+      </div>
+    </div>
+  </div>
+</section>

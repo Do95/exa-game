@@ -1,0 +1,10 @@
+development:
+  adapter: async
+
+test:
+  adapter: test
+
+# One web dyno on Heroku is enough for a classroom, so the in-memory adapter works.
+# If you ever run more than one dyno, add Heroku Redis and switch this to the redis adapter.
+production:
+  adapter: async

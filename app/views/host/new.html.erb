@@ -1,0 +1,18 @@
+<% content_for :title, "Host a live game" %>
+<div class="narrow">
+  <div class="kicker">Teacher · Live game</div>
+  <h1 class="big">Host a <em>live game</em></h1>
+  <p class="lead">Students join from their phones with a code. You control the pace from this screen.</p>
+  <%= form_with url: host_index_path, class: "stack" do %>
+    <div class="field">
+      <span class="label">Questions</span>
+      <div class="seg">
+        <% [5, 10, 15, 20, 30].each do |n| %>
+          <label><%= radio_button_tag :count, n, n == 10 %><span><%= n %></span></label>
+        <% end %>
+      </div>
+    </div>
+    <%= render "shared/kinds", prefix: "host" %>
+    <%= submit_tag "Create game", class: "btn" %>
+  <% end %>
+</div>

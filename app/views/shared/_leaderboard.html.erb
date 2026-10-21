@@ -1,0 +1,17 @@
+<%# Rows of a leaderboard. locals: participants, highlight (a participant, optional), show_mode %>
+<% highlight = local_assigns[:highlight] %>
+<% if participants.empty? %>
+  <p class="empty">No scores yet. Be the first!</p>
+<% else %>
+  <ol class="lb">
+    <% participants.each_with_index do |p, i| %>
+      <li class="lbrow <%= "me" if highlight && p.id == highlight.id %>" id="<%= dom_id(p, :lb) %>" style="--i:<%= i %>">
+        <span class="pos"><%= i + 1 %></span>
+        <span class="nm"><%= p.name %></span>
+        <% if local_assigns[:show_mode] %><%= mode_badge(p.game) %><% end %>
+        <span class="st"><%= p.correct_count %>/<%= p.answered_count %> correct</span>
+        <span class="sc"><%= p.score %></span>
+      </li>
+    <% end %>
+  </ol>
+<% end %>

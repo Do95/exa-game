@@ -1,0 +1,112 @@
+<% content_for :title, "Host #{@game.code}" %>
+<% content_for :card_class, "card-host" %>
+<%= turbo_stream_from @game %>
+
+<% case @game.status %>
+<% when "lobby" %>
+  <section class="screen host-lobby">
+    <div>
+      <div class="kicker">Join at <b><%= join_url %></b></div>
+      <p class="label">Game code</p>
+      <div class="bigcode"><%= @game.code.chars.map { |c| tag.span(c) }.join.html_safe %></div>
+      <p class="lead">Open <b><%= join_url(code: @game.code) %></b> on your phone, or go to <b>Join</b> and type the code.</p>
+    </div>
+    <div class="box">
+      <p class="label">Players · <%= @game.participants.count %></p>
+      <div class="players">
+        <% @game.participants.order(:created_at).each do |pl| %>
+          <span class="pchip" id="<%= dom_id(pl, :chip) %>"><%= pl.name %></span>
+        <% end %>
+        <% if @game.participants.none? %><p class="empty">Waiting for students to join…</p><% end %>
+      </div>
+      <div class="row">
+        <%= button_to "Start · #{@game.total} questions", start_host_path(@game), class: "btn", disabled: @game.participants.none? %>
+      </div>
+    </div>
+  </section>
+
+<% when "question" %>
+  <% q = @question %>
+  <% answered = @game.answers_for_current.count %>
+  <section class="screen">
+    <div class="meta"><span><%= q.kind_label %> · Code <%= @game.code %></span><span class="pill">Question <%= @game.current_index + 1 %> / <%= @game.total %></span></div>
+    <div class="qhead">
+      <div><%= question_prompt(q) %><p class="sub"><%= q.instruction %></p></div>
+      <%= countdown(seconds: @game.seconds_left, total: q.time_limit, submit: "reveal-form") %>
+    </div>
+    <div class="answers">
+      <% q.options.each_with_index do |opt, i| %>
+        <div class="ans" data-i="<%= i %>" style="--i:<%= i %>"><%= option_tag_contents(opt, i) %></div>
+      <% end %>
+    </div>
+    <div class="row spread">
+      <div class="answered"><span><%= answered %></span> / <%= @game.participants.count %> answered</div>
+      <%= button_to "Show answer now", reveal_host_path(@game), class: "btn btn-alt", form: { id: "reveal-form" } %>
+    </div>
+  </section>
+
+<% when "reveal" %>
+  <% q = @question %>
+  <% dist = @game.answers_for_current.group(:choice).count %>
+  <% max = [dist.values.max.to_i, 1].max %>
+  <% gained = @game.answers_for_current.pluck(:participant_id, :points).to_h %>
+  <section class="screen" data-controller="confetti" data-confetti-amount-value="70">
+    <div class="meta"><span><%= q.kind_label %></span><span class="pill">Question <%= @game.current_index + 1 %> / <%= @game.total %></span></div>
+    <%= question_prompt(q) %>
+    <div class="answers">
+      <% q.options.each_with_index do |opt, i| %>
+        <div class="ans <%= i == q.correct_index ? "right" : "dim" %>" data-i="<%= i %>">
+          <%= option_tag_contents(opt, i) %><span class="count"><%= dist[i].to_i %></span>
+          <span class="fillbar" style="width: <%= percent(dist[i].to_i, max) %>%"></span>
+        </div>
+      <% end %>
+    </div>
+    <div class="explain"><b>Answer: <%= q.correct_option %>.</b> <%= q.explanation %></div>
+    <div class="two-col">
+      <div>
+        <h3 class="label">Top players</h3>
+        <ol class="lb">
+          <% @game.ranking.limit(5).each_with_index do |pl, i| %>
+            <li class="lbrow" id="<%= dom_id(pl, :top) %>"><span class="pos"><%= i + 1 %></span><span class="nm"><%= pl.name %></span><span class="st up"><%= "+#{gained[pl.id]}" if gained[pl.id].to_i.positive? %></span><span class="sc"><%= pl.score %></span></li>
+          <% end %>
+        </ol>
+      </div>
+      <div class="row end">
+        <%= button_to (@game.last_question? ? "Final results" : "Next question"), next_host_path(@game), class: "btn", autofocus: true %>
+      </div>
+    </div>
+  </section>
+
+<% when "finished" %>
+  <% ranking = @game.ranking.to_a %>
+  <% top = ranking.first(3) %>
+  <section class="screen" data-controller="confetti" data-confetti-amount-value="220">
+    <div class="center">
+      <div class="kicker">Game over</div>
+      <h1 class="big"><%= top.first ? safe_join([top.first.name, " ", tag.em("wins!")]) : "Game over" %></h1>
+    </div>
+    <div class="podium">
+      <% order = top.size == 3 ? [top[1], top[0], top[2]] : top %>
+      <% order.each do |pl| %>
+        <% place = top.index(pl) %>
+        <div class="step step-<%= place + 1 %>" style="--d:<%= 2 - place %>">
+          <div class="place"><%= place + 1 %></div>
+          <div class="who"><%= pl.name %></div>
+          <div class="score"><%= pl.score %></div>
+          <small><%= pl.correct_count %>/<%= @game.total %> correct</small>
+        </div>
+      <% end %>
+    </div>
+    <% if ranking.size > 3 %>
+      <ol class="lb" start="4">
+        <% ranking.drop(3).each_with_index do |pl, i| %>
+          <li class="lbrow"><span class="pos"><%= i + 4 %></span><span class="nm"><%= pl.name %></span><span class="st"><%= pl.correct_count %>/<%= @game.total %> correct</span><span class="sc"><%= pl.score %></span></li>
+        <% end %>
+      </ol>
+    <% end %>
+    <div class="row center-row">
+      <%= link_to "New live game", new_host_path, class: "btn" %>
+      <%= link_to "All scores", scores_path, class: "btn btn-alt" %>
+    </div>
+  </section>
+<% end %>
