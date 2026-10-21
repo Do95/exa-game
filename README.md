@@ -4,8 +4,8 @@ Aplicación educativa de **Escuela Americana Extension** para practicar el Simpl
 Creado por **Equipo 2**.
 
 Hecha con Ruby on Rails 8 y Hotwire (Turbo + Stimulus). Las pantallas se actualizan en tiempo
-real con WebSockets (Action Cable), sin recargar la página. En tu computadora usa SQLite; en
-Heroku usa PostgreSQL.
+real con WebSockets (Action Cable), sin recargar la página. La base de datos es PostgreSQL,
+tanto en tu computadora como en Heroku.
 
 ## Qué hace
 
@@ -51,14 +51,24 @@ El área de maestra (`/admin` y "Host a live game") pide:
 
 ## Probarla en tu computadora
 
-Necesitás Ruby 3.3.6.
+Necesitás Ruby 3.3.6 y PostgreSQL instalado y encendido
+(en Mac: `brew install postgresql@16 && brew services start postgresql@16`;
+en Windows: el instalador de postgresql.org).
 
 ```bash
-bundle config set --local without production   # no necesitás PostgreSQL en tu computadora
 bundle install
-bin/rails db:prepare     # crea la base de datos SQLite y carga las preguntas
+bin/rails db:prepare     # crea la base de datos y carga las 176 preguntas
 bin/rails server
 ```
+
+Por defecto se conecta a PostgreSQL en `localhost:5432` con el usuario `postgres`.
+Si tu instalación usa otro usuario o contraseña, indicalo antes de los comandos:
+
+```bash
+export PGUSER=tu_usuario PGPASSWORD=tu_contraseña
+```
+
+(o poné una URL completa en `DATABASE_URL`).
 
 Abrí http://localhost:3000. La contraseña de maestra en tu computadora es `flashback`
 (usuario `admin`), a menos que pongas otra con `ADMIN_PASSWORD`.
