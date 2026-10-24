@@ -33,13 +33,21 @@
     <section class="screen">
       <div class="meta"><span><%= q.kind_label %></span><span class="pill"><%= @game.current_index + 1 %> / <%= @game.total %></span></div>
       <div class="qhead">
-        <div><%= question_prompt(q, size: :small) %><p class="sub"><%= q.instruction %></p></div>
+        <% if q.build? %>
+          <div><h2 class="prompt prompt-mid"><%= q.instruction %></h2></div>
+        <% else %>
+          <div><%= question_prompt(q, size: :small) %><p class="sub"><%= q.instruction %></p></div>
+        <% end %>
         <%= countdown(seconds: @game.seconds_left, total: q.time_limit) %>
       </div>
-      <%= form_with url: play_answer_path(@game), class: "answers answers-pad" do %>
-        <%= hidden_field_tag :position, @game.current_index %>
-        <% q.options.each_with_index do |opt, i| %>
-          <button type="submit" name="choice" value="<%= i %>" class="ans" data-i="<%= i %>" style="--i:<%= i %>"><%= option_tag_contents(opt, i) %></button>
+      <% if q.build? %>
+        <%= render "shared/builder", question: q, url: play_answer_path(@game), position: @game.current_index %>
+      <% else %>
+        <%= form_with url: play_answer_path(@game), class: "answers answers-pad" do %>
+          <%= hidden_field_tag :position, @game.current_index %>
+          <% q.options.each_with_index do |opt, i| %>
+            <button type="submit" name="choice" value="<%= i %>" class="ans" data-i="<%= i %>" style="--i:<%= i %>"><%= option_tag_contents(opt, i) %></button>
+          <% end %>
         <% end %>
       <% end %>
     </section>
@@ -54,6 +62,8 @@
       <h2><%= ok ? "Correct!" : (@answer ? "Not quite" : "Time's up") %></h2>
       <p>Answer: <b><%= q.correct_option %></b></p>
       <div class="pts"><%= "+#{@answer.points} · " if @answer&.points.to_i.positive? %><%= p.score %> points</div>
+      <% if @answer&.correct %><p class="speed"><%= points_breakdown(@answer) %></p><% end %>
+      <% if q.build? && @answer && !ok %><p>You wrote: <%= @answer.response %></p><% end %>
       <p>You're in place <b><%= p.rank %></b> of <%= @game.participants.count %></p>
     </div>
   </section>

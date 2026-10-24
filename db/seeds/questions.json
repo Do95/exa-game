@@ -2130,5 +2130,225 @@
   ],
   "correct_index": 0,
   "explanation": "teach → taught."
+ },
+ {
+  "kind": "build",
+  "prompt": "I watched a movie last night.",
+  "hint": "watch",
+  "options": [
+   "Last night I watched a movie."
+  ],
+  "correct_index": 0,
+  "explanation": "Regular verb in Simple Past: watched."
+ },
+ {
+  "kind": "build",
+  "prompt": "She went to the beach yesterday.",
+  "hint": "goed",
+  "options": [
+   "Yesterday she went to the beach."
+  ],
+  "correct_index": 0,
+  "explanation": "go → went. Subject + past verb + place + time."
+ },
+ {
+  "kind": "build",
+  "prompt": "We played soccer after school.",
+  "hint": "play",
+  "options": [
+   "After school we played soccer."
+  ],
+  "correct_index": 0,
+  "explanation": "Subject + verb in past + the rest."
+ },
+ {
+  "kind": "build",
+  "prompt": "They visited their grandparents last weekend.",
+  "hint": "visit",
+  "options": [
+   "Last weekend they visited their grandparents."
+  ],
+  "correct_index": 0,
+  "explanation": "Regular verb: visit + -ed."
+ },
+ {
+  "kind": "build",
+  "prompt": "He bought a new phone last month.",
+  "hint": "buyed",
+  "options": [
+   "Last month he bought a new phone."
+  ],
+  "correct_index": 0,
+  "explanation": "buy → bought."
+ },
+ {
+  "kind": "build",
+  "prompt": "My mom made a delicious cake.",
+  "hint": "maked",
+  "options": [],
+  "correct_index": 0,
+  "explanation": "make → made."
+ },
+ {
+  "kind": "build",
+  "prompt": "I didn't finish my homework.",
+  "hint": "finished",
+  "options": [],
+  "correct_index": 0,
+  "explanation": "didn't + base verb: didn't finish."
+ },
+ {
+  "kind": "build",
+  "prompt": "She didn't go to the party.",
+  "hint": "went",
+  "options": [],
+  "correct_index": 0,
+  "explanation": "didn't + base verb: didn't go."
+ },
+ {
+  "kind": "build",
+  "prompt": "We didn't see the teacher yesterday.",
+  "hint": "saw",
+  "options": [
+   "Yesterday we didn't see the teacher."
+  ],
+  "correct_index": 0,
+  "explanation": "didn't + base verb: didn't see."
+ },
+ {
+  "kind": "build",
+  "prompt": "Did you watch the game last night?",
+  "hint": "watched",
+  "options": [],
+  "correct_index": 0,
+  "explanation": "Did + subject + base verb?"
+ },
+ {
+  "kind": "build",
+  "prompt": "Did she call you yesterday?",
+  "hint": "called",
+  "options": [],
+  "correct_index": 0,
+  "explanation": "After did, use the base verb: call."
+ },
+ {
+  "kind": "build",
+  "prompt": "Where did you go last summer?",
+  "hint": "went",
+  "options": [],
+  "correct_index": 0,
+  "explanation": "Wh- word + did + subject + base verb?"
+ },
+ {
+  "kind": "build",
+  "prompt": "What did they eat for dinner?",
+  "hint": "ate",
+  "options": [],
+  "correct_index": 0,
+  "explanation": "Wh- word + did + subject + base verb?"
+ },
+ {
+  "kind": "build",
+  "prompt": "I was very tired yesterday.",
+  "hint": "were",
+  "options": [
+   "Yesterday I was very tired."
+  ],
+  "correct_index": 0,
+  "explanation": "I takes was."
+ },
+ {
+  "kind": "build",
+  "prompt": "My friends were at the concert.",
+  "hint": "was",
+  "options": [],
+  "correct_index": 0,
+  "explanation": "they / my friends takes were."
+ },
+ {
+  "kind": "build",
+  "prompt": "Was it cold last night?",
+  "hint": "did",
+  "options": [],
+  "correct_index": 0,
+  "explanation": "Questions with was / were don't use did."
+ },
+ {
+  "kind": "build",
+  "prompt": "He wasn't at school on Monday.",
+  "hint": "didn't",
+  "options": [
+   "On Monday he wasn't at school."
+  ],
+  "correct_index": 0,
+  "explanation": "Negative of was: wasn't."
+ },
+ {
+  "kind": "build",
+  "prompt": "Last year we traveled to Mexico.",
+  "hint": "travel",
+  "options": [
+   "We traveled to Mexico last year."
+  ],
+  "correct_index": 0,
+  "explanation": "Time expressions can go first: Last year, ..."
+ },
+ {
+  "kind": "build",
+  "prompt": "The baby cried all night.",
+  "hint": "cryed",
+  "options": [
+   "All night the baby cried."
+  ],
+  "correct_index": 0,
+  "explanation": "cry → cried."
+ },
+ {
+  "kind": "build",
+  "prompt": "They stopped the car at the corner.",
+  "hint": "stoped",
+  "options": [
+   "At the corner they stopped the car."
+  ],
+  "correct_index": 0,
+  "explanation": "stop → stopped: double the p."
+ },
+ {
+  "kind": "build",
+  "prompt": "I met my best friend in 2019.",
+  "hint": "meeted",
+  "options": [
+   "In 2019 I met my best friend."
+  ],
+  "correct_index": 0,
+  "explanation": "meet → met."
+ },
+ {
+  "kind": "build",
+  "prompt": "She studied English for two hours.",
+  "hint": "studyed",
+  "options": [
+   "For two hours she studied English."
+  ],
+  "correct_index": 0,
+  "explanation": "study → studied."
+ },
+ {
+  "kind": "build",
+  "prompt": "We took a lot of photos at the zoo.",
+  "hint": "taked",
+  "options": [
+   "At the zoo we took a lot of photos."
+  ],
+  "correct_index": 0,
+  "explanation": "take → took."
+ },
+ {
+  "kind": "build",
+  "prompt": "Did he win the race?",
+  "hint": "won",
+  "options": [],
+  "correct_index": 0,
+  "explanation": "After did, use the base verb: win."
  }
 ]

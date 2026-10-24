@@ -24,7 +24,7 @@ class SoloController < ApplicationController
 
   def answer
     if params[:position].to_i == @participant.current_index && !@participant.solo_finished?
-      @participant.record_answer!(position: @participant.current_index, choice: params[:choice])
+      @participant.record_answer!(position: @participant.current_index, choice: params[:choice], response: params[:response])
     end
     redirect_to solo_path(@game)
   end

@@ -9,7 +9,10 @@
       <div class="kicker">Join at <b><%= join_url %></b></div>
       <p class="label">Game code</p>
       <div class="bigcode"><%= @game.code.chars.map { |c| tag.span(c) }.join.html_safe %></div>
-      <p class="lead">Open <b><%= join_url(code: @game.code) %></b> on your phone, or go to <b>Join</b> and type the code.</p>
+      <div class="qr-join">
+        <%= qr_code(join_url(code: @game.code)) %>
+        <p class="lead"><b>Scan the QR code</b> with your phone camera, or open <b><%= join_url %></b> and type the code.</p>
+      </div>
     </div>
     <div class="box">
       <p class="label">Players · <%= @game.participants.count %></p>
@@ -34,11 +37,13 @@
       <div><%= question_prompt(q) %><p class="sub"><%= q.instruction %></p></div>
       <%= countdown(seconds: @game.seconds_left, total: q.time_limit, submit: "reveal-form") %>
     </div>
-    <div class="answers">
-      <% q.options.each_with_index do |opt, i| %>
-        <div class="ans" data-i="<%= i %>" style="--i:<%= i %>"><%= option_tag_contents(opt, i) %></div>
-      <% end %>
-    </div>
+    <% unless q.build? %>
+      <div class="answers">
+        <% q.options.each_with_index do |opt, i| %>
+          <div class="ans" data-i="<%= i %>" style="--i:<%= i %>"><%= option_tag_contents(opt, i) %></div>
+        <% end %>
+      </div>
+    <% end %>
     <div class="row spread">
       <div class="answered"><span><%= answered %></span> / <%= @game.participants.count %> answered</div>
       <%= button_to "Show answer now", reveal_host_path(@game), class: "btn btn-alt", form: { id: "reveal-form" } %>
@@ -54,14 +59,24 @@
     <div class="meta"><span><%= q.kind_label %></span><span class="pill">Question <%= @game.current_index + 1 %> / <%= @game.total %></span></div>
     <%= question_prompt(q) %>
     <div class="answers">
-      <% q.options.each_with_index do |opt, i| %>
-        <div class="ans <%= i == q.correct_index ? "right" : "dim" %>" data-i="<%= i %>">
-          <%= option_tag_contents(opt, i) %><span class="count"><%= dist[i].to_i %></span>
-          <span class="fillbar" style="width: <%= percent(dist[i].to_i, max) %>%"></span>
-        </div>
+      <% if q.build? %>
+        <%# Built sentences: choice 0 is right, 1 is wrong. %>
+        <% [["Built it right", 0, 3], ["Wrong order", 1, 1]].each do |text, c, color| %>
+          <div class="ans <%= "right" if c.zero? %>" data-i="<%= color %>">
+            <%= option_tag_contents(text, color) %><span class="count"><%= dist[c].to_i %></span>
+            <span class="fillbar" style="width: <%= percent(dist[c].to_i, max) %>%"></span>
+          </div>
+        <% end %>
+      <% else %>
+        <% q.options.each_with_index do |opt, i| %>
+          <div class="ans <%= i == q.correct_index ? "right" : "dim" %>" data-i="<%= i %>">
+            <%= option_tag_contents(opt, i) %><span class="count"><%= dist[i].to_i %></span>
+            <span class="fillbar" style="width: <%= percent(dist[i].to_i, max) %>%"></span>
+          </div>
+        <% end %>
       <% end %>
     </div>
-    <div class="explain"><b>Answer: <%= q.correct_option %>.</b> <%= q.explanation %></div>
+    <div class="explain"><b>Answer: <%= q.correct_option %><%= "." unless q.build? %></b> <%= q.explanation %></div>
     <div class="two-col">
       <div>
         <h3 class="label">Top players</h3>

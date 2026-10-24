@@ -31,7 +31,7 @@
         <% @questions.each do |q| %>
           <tr class="<%= "off" unless q.active %>" id="<%= dom_id(q) %>">
             <td><span class="badge"><%= q.kind_label %></span></td>
-            <td><b><%= q.prompt %></b><%= tag.small(" (#{q.hint})") if q.hint.present? %><br><small class="muted"><%= q.options.join(" · ") %></small></td>
+            <td><b><%= q.prompt %></b><%= tag.small(" (#{q.hint})") if q.hint.present? %><br><small class="muted"><%= q.build? ? q.tiles.join(" · ") : q.options.join(" · ") %></small><% if q.build? && q.options.any? %><br><small class="muted">Also right: <%= q.options.join(" · ") %></small><% end %></td>
             <td><%= q.correct_option %></td>
             <td><%= q.time_limit %>s</td>
             <td><%= button_to (q.active ? "On" : "Off"), toggle_admin_question_path(q), method: :patch, class: "toggle #{"on" if q.active}" %></td>

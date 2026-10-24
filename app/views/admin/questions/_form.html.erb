@@ -12,18 +12,19 @@
   </div>
   <label class="field"><span class="label">Question</span>
     <%= f.text_field :prompt, required: true, maxlength: 200, placeholder: "go · Last night, I ____ a movie. · Which sentence is correct?" %>
-    <small class="muted">For "Fill the gap", write ____ (four underscores) where the verb goes.</small>
+    <small class="muted">For "Fill the gap", write ____ (four underscores) where the verb goes. For "Build the sentence", write the full correct sentence; students get its words mixed up.</small>
   </label>
   <label class="field"><span class="label">Hint (optional)</span>
     <%= f.text_field :hint, maxlength: 40, placeholder: "watch" %>
-    <small class="muted">Shown in brackets after a "Fill the gap" sentence, like (watch).</small>
+    <small class="muted">Shown in brackets after a "Fill the gap" sentence, like (watch). For "Build the sentence", extra trap words that don't belong, like goed.</small>
   </label>
   <div class="grid-2">
     <label class="field"><span class="label">Answers, one per line (2 to 4)</span>
-      <%= f.text_area :options_text, rows: 4, required: true %>
+      <%= f.text_area :options_text, rows: 4 %>
+      <small class="muted">For "Build the sentence": other orders that are also right (optional), like "Last night I watched a movie."</small>
     </label>
     <label class="field"><span class="label">Number of the correct answer</span>
-      <%= f.number_field :correct_number, min: 1, max: 4, required: true %>
+      <%= f.number_field :correct_number, min: 1, max: 4 %>
       <small class="muted">1 is the first line, 2 the second, and so on.</small>
     </label>
   </div>

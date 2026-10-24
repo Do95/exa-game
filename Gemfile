@@ -16,6 +16,7 @@ gem "importmap-rails"
 gem "turbo-rails"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
+gem "rqrcode", "~> 3.0" # QR code to join a live game
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"

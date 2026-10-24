@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_10_21_202855) do
+ActiveRecord::Schema[8.0].define(version: 2026_10_23_120000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
-  
   create_table "answers", force: :cascade do |t|
     t.integer "participant_id", null: false
     t.integer "question_id", null: false
@@ -25,6 +24,7 @@ ActiveRecord::Schema[8.0].define(version: 2026_10_21_202855) do
     t.integer "ms"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "response"
     t.index ["participant_id", "position"], name: "index_answers_on_participant_id_and_position", unique: true
     t.index ["participant_id"], name: "index_answers_on_participant_id"
     t.index ["question_id"], name: "index_answers_on_question_id"

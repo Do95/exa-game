@@ -2,7 +2,10 @@ module ApplicationHelper
   SHAPES = %w[triangle diamond circle square].freeze
 
   # The question text, with the gap drawn as a line for "Fill the gap".
+  # "Build the sentence" shows its mixed-up words instead (the prompt is the answer).
   def question_prompt(question, size: :big)
+    return tag.div(safe_join(question.tiles.map { |w| tag.span(w, class: "tile") }), class: "tiles tiles-static") if question.build?
+
     css = ["prompt", ("prompt-mid" if question.kind.in?(%w[fill swipe fix]) || size == :small)].compact.join(" ")
     text = if question.kind == "fill"
              parts = question.prompt.split("____", 2)
@@ -29,6 +32,18 @@ module ApplicationHelper
         tag.b(seconds.ceil, data: { countdown_target: "label" })
       ])
     end
+  end
+
+  # "Correct! +812 · 500 + 312 for speed (4.1 s)"
+  def points_breakdown(answer)
+    return unless answer&.correct
+    "500 + #{answer.speed_bonus} for speed (#{answer.seconds} s)"
+  end
+
+  # QR code as inline SVG, so students can scan the board to join.
+  def qr_code(url)
+    svg = RQRCode::QRCode.new(url).as_svg(module_size: 6, standalone: true, use_path: true, viewbox: true, color: "14315A").sub(/\A<\?xml[^>]*>/, "")
+    tag.div(svg.html_safe, class: "qr", role: "img", aria: { label: "QR code to join the game" })
   end
 
   def mode_badge(game)

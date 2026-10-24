@@ -10,12 +10,12 @@ tanto en tu computadora como en Heroku.
 ## Qué hace
 
 - **Juego individual:** cada estudiante juega a su ritmo (5 a 20 preguntas) y al final ve un repaso de sus respuestas.
-- **Juego en vivo (multijugador):** la maestra crea una partida y proyecta su pantalla. Los estudiantes entran desde su celular con un código de 5 letras. La lista de jugadores, las respuestas, los resultados y el podio se actualizan solos.
+- **Juego en vivo (multijugador):** la maestra crea una partida y proyecta su pantalla. Los estudiantes entran desde su celular escaneando el código QR de la pantalla, o escribiendo el código de 6 números. La lista de jugadores, las respuestas, los resultados y el podio se actualizan solos.
 - **Ranking:** puntajes de hoy, de la semana o de siempre, actualizados en vivo.
 - **Administración** (`/admin`, con contraseña): agregar, editar, activar o desactivar y borrar preguntas; ver las últimas partidas; borrar puntajes.
-- **Banco inicial:** 176 preguntas en 5 tipos: verbos irregulares, regular o irregular, ¿es Simple Past?, completar el espacio y corregir el error.
+- **Banco inicial:** 200 preguntas en 6 tipos: verbos irregulares, regular o irregular, ¿es Simple Past?, completar el espacio, corregir el error y construir la oración (ordenar las palabras, con una palabra trampa).
 
-Puntos: 500 por respuesta correcta, más hasta 500 por rapidez.
+Puntos: 500 por respuesta correcta, más hasta 500 por rapidez (cuanto más rápido contestás, más puntos). Después de cada respuesta se ve el desglose, por ejemplo "500 + 312 for speed (4.1 s)".
 
 ## Publicarla en Heroku
 
@@ -34,7 +34,7 @@ heroku open
 Eso es todo. En cada despliegue, Heroku:
 
 - instala las gemas y prepara los estilos;
-- corre el paso `release` del `Procfile`, que crea las tablas y carga las 176 preguntas (si ya están, no las repite);
+- corre el paso `release` del `Procfile`, que crea las tablas y carga las 200 preguntas (si ya están, no las repite);
 - arranca el servidor web.
 
 Heroku crea `DATABASE_URL` y `SECRET_KEY_BASE` por su cuenta. Si `SECRET_KEY_BASE` no aparece en
@@ -57,7 +57,7 @@ en Windows: el instalador de postgresql.org).
 
 ```bash
 bundle install
-bin/rails db:prepare     # crea la base de datos y carga las 176 preguntas
+bin/rails db:prepare     # crea la base de datos y carga las 200 preguntas
 bin/rails server
 ```
 

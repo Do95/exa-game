@@ -1,0 +1,18 @@
+<%# "Build the sentence": tap the words to put them in order. Kept across live page refreshes. %>
+<%= form_with url: url, id: "builder-#{position}", class: "builder", data: { controller: "builder", turbo_permanent: true } do %>
+  <%= hidden_field_tag :position, position, id: nil %>
+  <%= hidden_field_tag :choice, 0, id: nil %>
+  <%= hidden_field_tag :response, "", id: nil, data: { builder_target: "response" } %>
+  <div class="built-row">
+    <%= tag.div("", class: "built tiles", data: { builder_target: "answer" }, aria: { label: "Your sentence" }) %><% if question.end_mark.present? %><span class="endmark"><%= question.end_mark %></span><% end %>
+  </div>
+  <div class="tiles" data-builder-target="bank">
+    <% question.tiles.each_with_index do |word, i| %>
+      <button type="button" class="tile" data-word="<%= word %>" data-order="<%= i %>" data-action="builder#pick" style="--i:<%= i %>"><%= word %></button>
+    <% end %>
+  </div>
+  <div class="row">
+    <button type="submit" class="btn" disabled data-builder-target="submit">Check</button>
+    <button type="button" class="btn btn-alt" data-action="builder#clear">Clear</button>
+  </div>
+<% end %>

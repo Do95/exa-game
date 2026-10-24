@@ -27,7 +27,7 @@ class PlayersController < ApplicationController
 
   def answer
     if @game.status == "question" && params[:position].to_i == @game.current_index
-      @participant.record_answer!(position: @game.current_index, choice: params[:choice])
+      @participant.record_answer!(position: @game.current_index, choice: params[:choice], response: params[:response])
       @game.reveal! if @game.everyone_answered?
     end
     redirect_to play_path(@game)
