@@ -4,7 +4,7 @@
 
 <% case @game.status %>
 <% when "lobby" %>
-  <section class="screen host-lobby">
+  <section class="screen host-lobby" id="<%= screen_id(@game, "lobby") %>" data-controller="screen">
     <div>
       <div class="kicker">Join at <b><%= join_url %></b></div>
       <p class="label">Game code</p>
@@ -31,7 +31,7 @@
 <% when "question" %>
   <% q = @question %>
   <% answered = @game.answers_for_current.count %>
-  <section class="screen">
+  <section class="screen" id="<%= screen_id(@game, @game.current_index, "question") %>" data-controller="screen">
     <div class="meta"><span><%= q.kind_label %> · Code <%= @game.code %></span><span class="pill">Question <%= @game.current_index + 1 %> / <%= @game.total %></span></div>
     <div class="qhead">
       <div><%= question_prompt(q) %><p class="sub"><%= q.instruction %></p></div>
@@ -55,7 +55,7 @@
   <% dist = @game.answers_for_current.group(:choice).count %>
   <% max = [dist.values.max.to_i, 1].max %>
   <% gained = @game.answers_for_current.pluck(:participant_id, :points).to_h %>
-  <section class="screen" data-controller="confetti" data-confetti-amount-value="70">
+  <section class="screen" id="<%= screen_id(@game, @game.current_index, "reveal") %>" data-controller="screen confetti" data-confetti-amount-value="70">
     <div class="meta"><span><%= q.kind_label %></span><span class="pill">Question <%= @game.current_index + 1 %> / <%= @game.total %></span></div>
     <%= question_prompt(q) %>
     <div class="answers">
@@ -95,7 +95,7 @@
 <% when "finished" %>
   <% ranking = @game.ranking.to_a %>
   <% top = ranking.first(3) %>
-  <section class="screen" data-controller="confetti" data-confetti-amount-value="220">
+  <section class="screen" id="<%= screen_id(@game, "finished") %>" data-controller="screen confetti" data-confetti-amount-value="220">
     <div class="center">
       <div class="kicker">Game over</div>
       <h1 class="big"><%= top.first ? safe_join([top.first.name, " ", tag.em("wins!")]) : "Game over" %></h1>

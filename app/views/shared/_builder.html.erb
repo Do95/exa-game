@@ -1,5 +1,5 @@
 <%# "Build the sentence": tap the words to put them in order. Kept across live page refreshes. %>
-<%= form_with url: url, id: "builder-#{position}", class: "builder", data: { controller: "builder", turbo_permanent: true } do %>
+<%= form_with url: url, id: "builder-#{game.code}-#{position}", class: "builder", data: { controller: "builder", turbo_permanent: true } do %>
   <%= hidden_field_tag :position, position, id: nil %>
   <%= hidden_field_tag :choice, 0, id: nil %>
   <%= hidden_field_tag :response, "", id: nil, data: { builder_target: "response" } %>

@@ -8,7 +8,7 @@
 
 <% if p.solo_finished? %>
   <%= turbo_stream_from "leaderboard" %>
-  <section class="screen center" data-controller="confetti" data-confetti-amount-value="160">
+  <section class="screen center" id="<%= screen_id(@game, "finished") %>" data-controller="screen confetti" data-confetti-amount-value="160">
     <div class="kicker">Game over</div>
     <h1 class="big"><%= p.score %> <em>points</em></h1>
     <p class="lead center-block">You got <b><%= p.correct_count %> of <%= @game.total %></b> right (<%= percent(p.correct_count, @game.total) %>%).</p>
@@ -52,7 +52,7 @@
 
 <% elsif @answer %>
   <% q = @question %>
-  <section class="screen" <%= "data-controller=confetti" if @answer.correct %>>
+  <section class="screen" id="<%= screen_id(@game, p.current_index, "answer") %>" data-controller="screen<%= " confetti" if @answer.correct %>">
     <div class="meta"><span><%= q.kind_label %></span><span class="pill"><%= p.current_index + 1 %> / <%= @game.total %></span></div>
     <%= question_prompt(q) %>
     <% if q.build? %>
@@ -76,7 +76,7 @@
 
 <% else %>
   <% q = @question %>
-  <section class="screen">
+  <section class="screen" id="<%= screen_id(@game, p.current_index, "question") %>" data-controller="screen">
     <div class="meta"><span><%= q.kind_label %></span><span class="pill"><%= p.current_index + 1 %> / <%= @game.total %></span></div>
     <div class="qhead">
       <% if q.build? %>
@@ -87,7 +87,7 @@
       <%= countdown(seconds: p.seconds_left, total: q.time_limit, submit: "timeout-form") %>
     </div>
     <% if q.build? %>
-      <%= render "shared/builder", question: q, url: answer_solo_path(@game), position: p.current_index %>
+      <%= render "shared/builder", game: @game, question: q, url: answer_solo_path(@game), position: p.current_index %>
     <% else %>
       <%= form_with url: answer_solo_path(@game), class: "answers", data: { turbo_submits_with: nil } do %>
         <%= hidden_field_tag :position, p.current_index %>

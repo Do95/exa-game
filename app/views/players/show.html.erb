@@ -8,7 +8,7 @@
 
 <% case @game.status %>
 <% when "lobby" %>
-  <section class="screen wait">
+  <section class="screen wait" id="<%= screen_id(@game, "lobby") %>" data-controller="screen">
     <div>
       <div class="kicker">Game <%= @game.code %></div>
       <h1 class="big">You're <em>in!</em></h1>
@@ -21,7 +21,7 @@
 <% when "question" %>
   <% q = @question %>
   <% if @answer %>
-    <section class="screen wait">
+    <section class="screen wait" id="<%= screen_id(@game, @game.current_index, "sent") %>" data-controller="screen">
       <div>
         <div class="kicker">Question <%= @game.current_index + 1 %> / <%= @game.total %></div>
         <h1 class="big">Answer <em>sent!</em></h1>
@@ -30,7 +30,7 @@
       </div>
     </section>
   <% else %>
-    <section class="screen">
+    <section class="screen" id="<%= screen_id(@game, @game.current_index, "question") %>" data-controller="screen">
       <div class="meta"><span><%= q.kind_label %></span><span class="pill"><%= @game.current_index + 1 %> / <%= @game.total %></span></div>
       <div class="qhead">
         <% if q.build? %>
@@ -41,7 +41,7 @@
         <%= countdown(seconds: @game.seconds_left, total: q.time_limit) %>
       </div>
       <% if q.build? %>
-        <%= render "shared/builder", question: q, url: play_answer_path(@game), position: @game.current_index %>
+        <%= render "shared/builder", game: @game, question: q, url: play_answer_path(@game), position: @game.current_index %>
       <% else %>
         <%= form_with url: play_answer_path(@game), class: "answers answers-pad" do %>
           <%= hidden_field_tag :position, @game.current_index %>
@@ -56,7 +56,7 @@
 <% when "reveal" %>
   <% q = @question %>
   <% ok = @answer&.correct %>
-  <section class="screen result <%= ok ? "ok" : "no" %>" <%= "data-controller=confetti" if ok %>>
+  <section class="screen result <%= ok ? "ok" : "no" %>" id="<%= screen_id(@game, @game.current_index, "reveal") %>" data-controller="screen<%= " confetti" if ok %>">
     <div>
       <div class="icon"><%= ok ? "✓" : "✗" %></div>
       <h2><%= ok ? "Correct!" : (@answer ? "Not quite" : "Time's up") %></h2>
@@ -69,7 +69,7 @@
   </section>
 
 <% when "finished" %>
-  <section class="screen result ok" data-controller="confetti" data-confetti-amount-value="<%= p.rank <= 3 ? 180 : 60 %>">
+  <section class="screen result ok" id="<%= screen_id(@game, "finished") %>" data-controller="screen confetti" data-confetti-amount-value="<%= p.rank <= 3 ? 180 : 60 %>">
     <div>
       <div class="kicker">Game over</div>
       <h1 class="big">Place <em><%= p.rank %></em></h1>

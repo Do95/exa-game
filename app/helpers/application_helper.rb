@@ -40,6 +40,10 @@ module ApplicationHelper
     "500 + #{answer.speed_bonus} for speed (#{answer.seconds} s)"
   end
 
+  # Each question and state gets its own screen id. Moving on then replaces the whole screen
+  # (fresh animations, timer, buttons, scroll) instead of patching the previous one in place.
+  def screen_id(game, *step) = ["screen", game.code, *step].join("-")
+
   # QR code as inline SVG, so students can scan the board to join.
   def qr_code(url)
     svg = RQRCode::QRCode.new(url).as_svg(module_size: 6, standalone: true, use_path: true, viewbox: true, color: "14315A").sub(/\A<\?xml[^>]*>/, "")
