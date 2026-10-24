@@ -75,7 +75,7 @@ class Game < ApplicationRecord
 
   def assign_code
     self.code ||= loop do
-      candidate = Array.new(5) { "ABCDEFGHJKLMNPQRSTUVWXYZ23456789".chars.sample }.join
+      candidate = rand(100_000..999_999).to_s
       break candidate unless Game.exists?(code: candidate)
     end
   end

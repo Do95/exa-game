@@ -30,7 +30,7 @@
     <section class="mode-card">
       <div class="mode-head"><span class="mode-ico ico-live" aria-hidden="true"></span><div><h2>Join a live game</h2><p>Your teacher shows the code on the board.</p></div></div>
       <%= form_with url: join_path, class: "stack" do %>
-        <label class="field"><span class="label">Game code</span><%= text_field_tag :code, nil, maxlength: 5, required: true, placeholder: "ABCDE", class: "code-input", autocomplete: "off", autocapitalize: "characters" %></label>
+        <label class="field"><span class="label">Game code</span><%= text_field_tag :code, nil, maxlength: 6, required: true, placeholder: "123456", class: "code-input", autocomplete: "off", inputmode: "numeric", pattern: "[0-9]{6}" %></label>
         <label class="field"><span class="label">Your name</span><%= text_field_tag :name, nil, maxlength: 22, required: true, placeholder: "Type your name", autocomplete: "off" %></label>
         <%= submit_tag "Join the game", class: "btn btn-red", data: { turbo_submits_with: "Joining…" } %>
       <% end %>
