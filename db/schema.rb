@@ -14,6 +14,7 @@ ActiveRecord::Schema[8.0].define(version: 2026_10_21_202855) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
+  
   create_table "answers", force: :cascade do |t|
     t.integer "participant_id", null: false
     t.integer "question_id", null: false
